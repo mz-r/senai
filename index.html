@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Estacionamento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Controle de Estacionamento</h1>
+    
+    <!-- Tela de Cadastro de Reserva -->
+    <div id="cadastro">
+        <h2>Cadastro de Reserva</h2>
+        <form>
+            <label for="placa">Placa do Veículo:</label>
+            <input type="text" id="placa" required><br>
+            
+            <label for="nome">Nome do Proprietário:</label>
+            <input type="text" id="nome" required><br>
+            
+            <label for="apartamento">Número do Apartamento:</label>
+            <input type="text" id="apartamento" required><br>
+            
+            <label for="bloco">Bloco do Apartamento:</label>
+            <input type="text" id="bloco" required><br>
+            
+            <label for="modelo">Modelo do Veículo:</label>
+            <input type="text" id="modelo" required><br>
+            
+            <label for="cor">Cor do Veículo:</label>
+            <input type="text" id="cor" required><br>
+            
+            <label for="vaga">Número da Vaga de Estacionamento:</label>
+            <input type="text" id="vaga" required><br>
+            
+            <button type="button" onclick="salvarReserva()">Salvar</button>
+            <button type="button" onclick="mostrarLista()">Listar Reservas</button>
+        </form>
+    </div>
+    
+    <!-- Tela de Lista de Reservas -->
+    <div id="lista">
+        <h2>Listagem de Reservas</h2>
+        <ul id="listaReservas"></ul>
+        <button type="button" onclick="mostrarCadastro()">Voltar ao Cadastro</button>
+    </div>
+    
+    <script src="model.js"></script>
+    <script src="view.js"></script>
+    <script src="controller.js"></script>
+</body>
+</html>
